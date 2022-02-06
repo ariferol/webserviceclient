@@ -6,3 +6,4 @@ https://postman-echo.com/get?test=123 , https://reqres.in/api/products/3
 Yararlanılan kaynaklar:
 1) https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/mocking-with-examples/#step-6---add-another-example
 2) https://reqbin.com/
+3) https://blog.cpming.top/p/httpurlconnection-x-www-form-urlencoded
