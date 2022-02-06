@@ -10,9 +10,11 @@ package com.mycompany.webserviceclient.samples;
  * @author ariferol
  */
 public class TODOList {
+//json serializer örnekleri
 //    Yapılması planlanan consume örnekleri:
 //    RESTPostTest
 //    RESTGetTest 
 //    SOAPPostTest
 //    SOAPGetTest
+
 }
