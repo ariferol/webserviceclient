@@ -13,9 +13,66 @@
             <type>jar</type>
         </dependency>
     </dependencies>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <cxf.version>3.5.2</cxf.version>
+        <wsdl.endpoint.location>http://x.x.x.x/path?wsdl</wsdl.endpoint.location>    
     </properties>
+
+<!--SOAP web servis wsdl larinin generate edilmesi icin kullanilan cok tercih edilen plugin; Apache CXF, 'cxf-codegen-plugin' dir.-->
+<!--    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://nexus.com.tr/content/repositories/samplepath/</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
+    <build>
+        <plugins>   
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>${cxf.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/testservice.wsdl</wsdl>
+                                    <wsdl>${wsdl.endpoint.location}</wsdl>                                    
+                                    <packagenames> 
+                                        <packagename>tr.com.myproject</packagename>
+                                    </packagenames>
+                                    <extraargs>
+                                        <extraarg>-autoNameResolution</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>   
+            
+            Alttaki plugin ise; build time da test i skip etmek icin kullanilir.skipTests false yapilirsa test aktif edilmis olur 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin> 
+        </plugins>
+    </build>-->
+    
 </project>
